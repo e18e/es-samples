@@ -2,6 +2,16 @@
 
 A comprehensive breakdown of ECMAScript language features showcased across the executable code samples in `es-samples` (ES2011/ES5.1 through ES2026), cross-referenced with MDN [browser-compat-data](https://github.com/mdn/browser-compat-data), Baseline web feature identifiers on [webstatus.dev](https://webstatus.dev), and TypeScript (`tsconfig.json`) `target` / `lib` behavior.
 
+### Baseline Year Match Legend
+
+The **Baseline Year Match** column compares the calendar year of the **ES Edition** against the calendar year the feature reached **Baseline Newly available** across all core browsers:
+
+- **⚡ Early Adoption (`Baseline Year < ES Year`)**: Reached Baseline Newly available across core browsers *before* the official publication year of its ECMAScript edition (e.g., implemented in browsers at Stage 3).
+- **✅ Same-Year Match (`Baseline Year === ES Year`)**: Reached Baseline Newly available in the *same calendar year* as its ECMAScript edition.
+- **🐢 Lagging Adoption (`Baseline Year > ES Year`)**: Reached Baseline Newly available in a *later calendar year* than its ECMAScript edition (at least one core browser implemented the feature after the spec year).
+- **❎ Pre-Baseline**: Universally supported across browsers prior to Baseline tracking (2015).
+- **❌ Limited Availability**: Not yet supported across all core Baseline browsers.
+
 | Feature Name | Category | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available | Baseline Year Match | TS Target | TS Lib | TS Below-Target Behavior |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
 | [**Strict Mode**](samples/es2011/strict-mode.js) | Syntax | Introduces a restricted variant of JavaScript that eliminates silent errors by throwing exceptions, disables features that are confusing or poorly thought out, and simplifies variable resolution (e.g., forbidding implicit global creation). | ES5.1 (2011) | [`javascript.`<br>`statements.`<br>`strict_mode`](https://github.com/mdn/browser-compat-data/blob/main/javascript/statements.json) | [`strict-mode`](https://webstatus.dev/features/strict-mode) | Pre-Baseline (Universal Support)* | Pre-Baseline (Universal Support)* | ❎ | `es5` | — | Untouched |

@@ -171,6 +171,13 @@ export function formatTsBehavior(item) {
 export function generateMarkdown(manifest) {
   let md = `# ECMAScript Language Features Index\n\n`;
   md += `A comprehensive breakdown of ECMAScript language features showcased across the executable code samples in \`es-samples\` (ES2011/ES5.1 through ES2026), cross-referenced with MDN [browser-compat-data](https://github.com/mdn/browser-compat-data), Baseline web feature identifiers on [webstatus.dev](https://webstatus.dev), and TypeScript (\`tsconfig.json\`) \`target\` / \`lib\` behavior.\n\n`;
+  md += `### Baseline Year Match Legend\n\n`;
+  md += `The **Baseline Year Match** column compares the calendar year of the **ES Edition** against the calendar year the feature reached **Baseline Newly available** across all core browsers:\n\n`;
+  md += `- **⚡ Early Adoption (\`Baseline Year < ES Year\`)**: Reached Baseline Newly available across core browsers *before* the official publication year of its ECMAScript edition (e.g., implemented in browsers at Stage 3).\n`;
+  md += `- **✅ Same-Year Match (\`Baseline Year === ES Year\`)**: Reached Baseline Newly available in the *same calendar year* as its ECMAScript edition.\n`;
+  md += `- **🐢 Lagging Adoption (\`Baseline Year > ES Year\`)**: Reached Baseline Newly available in a *later calendar year* than its ECMAScript edition (at least one core browser implemented the feature after the spec year).\n`;
+  md += `- **❎ Pre-Baseline**: Universally supported across browsers prior to Baseline tracking (2015).\n`;
+  md += `- **❌ Limited Availability**: Not yet supported across all core Baseline browsers.\n\n`;
   md += `| Feature Name | Category | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available | Baseline Year Match | TS Target | TS Lib | TS Below-Target Behavior |\n`;
   md += `| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |\n`;
 

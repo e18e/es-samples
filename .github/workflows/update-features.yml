@@ -1,0 +1,63 @@
+name: Refresh Feature Mappings & Baseline Data
+
+on:
+  schedule:
+    # Run weekly every Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh-features:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update data & TypeScript dependencies
+        run: npm run update:deps
+
+      - name: Sync feature mappings and regenerate FEATURES.md
+        run: npm run update:features
+
+      - name: Check for changes in features.json or FEATURES.md
+        id: check-changes
+        run: |
+          if [[ -n "$(git status --porcelain features.json FEATURES.md)" ]]; then
+            echo "changes-available=TRUE" >> "$GITHUB_OUTPUT"
+            git diff --stat features.json FEATURES.md
+          else
+            echo "changes-available=FALSE" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run tests
+        if: steps.check-changes.outputs.changes-available == 'TRUE'
+        run: npm test
+
+      - name: Create Pull Request
+        if: steps.check-changes.outputs.changes-available == 'TRUE'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: |
+            features.json
+            FEATURES.md
+            package.json
+            package-lock.json
+          commit-message: "chore: refresh Baseline and TypeScript feature mappings"
+          title: "chore: refresh Baseline and TypeScript feature mappings"
+          body: |
+            Automated weekly update of ECMAScript feature mappings, Baseline availability dates (`web-features` / `@mdn/browser-compat-data`), and TypeScript `lib` declarations.
+          branch: chore/refresh-feature-mappings
+          delete-branch: true

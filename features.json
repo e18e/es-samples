@@ -8,7 +8,11 @@
     "sampleFile": "samples/es2011/strict-mode.js",
     "functionName": "demoStrictMode",
     "compatKey": "javascript.statements.strict_mode",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "function-prototype-bind",
@@ -19,7 +23,11 @@
     "sampleFile": "samples/es2011/function-bind.js",
     "functionName": "demoFunctionBind",
     "compatKey": "javascript.builtins.Function.bind",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "native-json-parsing-and-serialization",
@@ -30,7 +38,11 @@
     "sampleFile": "samples/es2011/json.js",
     "functionName": "demoJSON",
     "compatKey": "javascript.builtins.JSON",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-literal-getters-and-setters",
@@ -41,7 +53,11 @@
     "sampleFile": "samples/es2011/getters-and-setters.js",
     "functionName": "demoGettersAndSetters",
     "compatKey": "javascript.functions.get",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "string-property-access",
@@ -52,7 +68,11 @@
     "sampleFile": "samples/es2011/string-indexing.js",
     "functionName": "demoStringIndexing",
     "compatKey": "javascript.builtins.String",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-trim",
@@ -63,7 +83,11 @@
     "sampleFile": "samples/es2011/string-trim.js",
     "functionName": "demoStringTrim",
     "compatKey": "javascript.builtins.String.trim",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "const-declarations",
@@ -74,7 +98,11 @@
     "sampleFile": "samples/es2015/const-declarations.js",
     "functionName": "demoConst",
     "compatKey": "javascript.statements.const",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "iterators-and-for-of-statement",
@@ -85,7 +113,13 @@
     "sampleFile": "samples/es2015/iterators-and-for-of.js",
     "functionName": "demoForOfAndIterators",
     "compatKey": "javascript.statements.for_of",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": "es2015.iterable",
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__values"
+    ]
   },
   {
     "id": "promise-objects",
@@ -96,7 +130,11 @@
     "sampleFile": "samples/es2015/promises.js",
     "functionName": "demoPromise",
     "compatKey": "javascript.builtins.Promise",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "binary-and-octal-numeric-literals",
@@ -107,7 +145,11 @@
     "sampleFile": "samples/es2015/numeric-literals.js",
     "functionName": "demoNumericLiterals",
     "compatKey": "javascript.grammar.binary_numeric_literals",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "symbol-primitive-type",
@@ -118,7 +160,11 @@
     "sampleFile": "samples/es2015/symbols.js",
     "functionName": "demoSymbols",
     "compatKey": "javascript.builtins.Symbol",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.symbol",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "template-literals-and-tagged-templates",
@@ -129,7 +175,13 @@
     "sampleFile": "samples/es2015/template-literals.js",
     "functionName": "demoTemplateLiterals",
     "compatKey": "javascript.grammar.template_literals",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__makeTemplateObject"
+    ]
   },
   {
     "id": "enhanced-object-literals",
@@ -140,7 +192,11 @@
     "sampleFile": "samples/es2015/enhanced-object-literals.js",
     "functionName": "demoEnhancedObjectLiterals",
     "compatKey": "javascript.operators.object_initializer.shorthand_property_names",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "destructuring-assignment",
@@ -151,7 +207,13 @@
     "sampleFile": "samples/es2015/destructuring.js",
     "functionName": "demoDestructuring",
     "compatKey": "javascript.operators.destructuring",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__read"
+    ]
   },
   {
     "id": "array-prototype-includes",
@@ -162,7 +224,11 @@
     "sampleFile": "samples/es2016/array-includes.js",
     "functionName": "demoArrayIncludes",
     "compatKey": "javascript.builtins.Array.includes",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2016.array.include",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "arrow-function-definitions",
@@ -173,7 +239,11 @@
     "sampleFile": "samples/es2015/arrow-functions.js",
     "functionName": "add",
     "compatKey": "javascript.functions.arrow_functions",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "generator-functions-and-yield-statement",
@@ -184,7 +254,13 @@
     "sampleFile": "samples/es2015/generators.js",
     "functionName": "demoGenerator",
     "compatKey": "javascript.statements.generator_function",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": "es2015.generator",
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__generator"
+    ]
   },
   {
     "id": "ecmascript-2015-6th-edition-code-samples",
@@ -195,7 +271,11 @@
     "sampleFile": "samples/es2015/let-declarations.js",
     "functionName": "demoLet",
     "compatKey": "javascript.statements.let",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "iterator-helpers",
@@ -206,7 +286,11 @@
     "sampleFile": "samples/es2025/iterator-helpers.js",
     "functionName": "demoIteratorHelpers",
     "compatKey": "javascript.builtins.Iterator",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.iterator",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "class-definitions-and-inheritance",
@@ -217,7 +301,13 @@
     "sampleFile": "samples/es2015/classes.js",
     "functionName": "Animal",
     "compatKey": "javascript.statements.class",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__extends"
+    ]
   },
   {
     "id": "exponentiation-operator",
@@ -228,7 +318,11 @@
     "sampleFile": "samples/es2016/exponentiation-operator.js",
     "functionName": "demoExponentiationOperator",
     "compatKey": "javascript.operators.exponentiation",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2016",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "object-entries",
@@ -239,7 +333,11 @@
     "sampleFile": "samples/es2017/object-entries.js",
     "functionName": "demoObjectEntries",
     "compatKey": "javascript.builtins.Object.entries",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2017.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-values",
@@ -250,7 +348,11 @@
     "sampleFile": "samples/es2017/object-values.js",
     "functionName": "demoObjectValues",
     "compatKey": "javascript.builtins.Object.values",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2017.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "async-await",
@@ -261,7 +363,14 @@
     "sampleFile": "samples/es2017/async-await.js",
     "functionName": "demoAsyncAwait",
     "compatKey": "javascript.operators.async_function",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2017",
+    "tsLib": "es2015.promise",
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__awaiter",
+      "__generator"
+    ]
   },
   {
     "id": "object-getownpropertydescriptors",
@@ -272,7 +381,11 @@
     "sampleFile": "samples/es2017/get-own-property-descriptors.js",
     "functionName": "demoGetOwnPropertyDescriptors",
     "compatKey": "javascript.builtins.Object.getOwnPropertyDescriptors",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2017.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-padend",
@@ -283,7 +396,11 @@
     "sampleFile": "samples/es2017/string-pad-end.js",
     "functionName": "demoStringPadEnd",
     "compatKey": "javascript.builtins.String.padEnd",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2017.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-padstart",
@@ -294,7 +411,11 @@
     "sampleFile": "samples/es2017/string-pad-start.js",
     "functionName": "demoStringPadStart",
     "compatKey": "javascript.builtins.String.padStart",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2017.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "trailing-commas-in-function-parameter-lists-and-calls",
@@ -305,7 +426,11 @@
     "sampleFile": "samples/es2017/trailing-commas.js",
     "functionName": "demoTrailingCommas",
     "compatKey": "javascript.grammar.trailing_commas.trailing_commas_in_functions",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "es-modules",
@@ -316,7 +441,11 @@
     "sampleFile": "samples/es2015/modules.js",
     "functionName": "moduleFeatureDemo",
     "compatKey": "javascript.statements.import",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "promise-prototype-finally",
@@ -327,7 +456,11 @@
     "sampleFile": "samples/es2018/promise-finally.js",
     "functionName": "demoPromiseFinally",
     "compatKey": "javascript.builtins.Promise.finally",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2018.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "async-iteration",
@@ -338,7 +471,15 @@
     "sampleFile": "samples/es2018/async-iteration.js",
     "functionName": "demoAsyncGenerator",
     "compatKey": "javascript.statements.for_await_of",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": "es2018.asynciterable",
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__asyncValues",
+      "__asyncGenerator",
+      "__await"
+    ]
   },
   {
     "id": "rest-and-spread-properties-for-objects",
@@ -349,7 +490,14 @@
     "sampleFile": "samples/es2018/object-rest-spread.js",
     "functionName": "demoObjectRestSpread",
     "compatKey": "javascript.operators.object_initializer.spread_properties",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__assign",
+      "__rest"
+    ]
   },
   {
     "id": "template-literal-revision",
@@ -360,7 +508,13 @@
     "sampleFile": "samples/es2018/template-literal-revision.js",
     "functionName": "demoTemplateLiteralRevision",
     "compatKey": "javascript.grammar.template_literals.template_literal_revision",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__makeTemplateObject"
+    ]
   },
   {
     "id": "ecmascript-2019-10th-edition-code-samples",
@@ -371,7 +525,11 @@
     "sampleFile": "samples/es2019/array-flat.js",
     "functionName": "demoArrayFlat",
     "compatKey": "javascript.builtins.Array.flat",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2019.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-flatmap",
@@ -382,7 +540,11 @@
     "sampleFile": "samples/es2019/array-flat-map.js",
     "functionName": "demoArrayFlatMap",
     "compatKey": "javascript.builtins.Array.flatMap",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2019.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-fromentries",
@@ -393,7 +555,11 @@
     "sampleFile": "samples/es2019/object-from-entries.js",
     "functionName": "demoObjectFromEntries",
     "compatKey": "javascript.builtins.Object.fromEntries",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2019.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "optional-catch-binding",
@@ -404,7 +570,11 @@
     "sampleFile": "samples/es2019/optional-catch-binding.js",
     "functionName": "demoOptionalCatchBinding",
     "compatKey": "javascript.statements.try_catch.optional_catch_binding",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2019",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "stable-array-prototype-sort",
@@ -415,7 +585,11 @@
     "sampleFile": "samples/es2019/stable-sort.js",
     "functionName": "demoStableSort",
     "compatKey": "javascript.builtins.Array.sort.stable_sorting",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-trimend",
@@ -426,7 +600,11 @@
     "sampleFile": "samples/es2019/string-trim-end.js",
     "functionName": "demoStringTrimEnd",
     "compatKey": "javascript.builtins.String.trimEnd",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2019.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-trimstart",
@@ -437,7 +615,11 @@
     "sampleFile": "samples/es2019/string-trim-start.js",
     "functionName": "demoStringTrimStart",
     "compatKey": "javascript.builtins.String.trimStart",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2019.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "symbol-prototype-description",
@@ -448,7 +630,11 @@
     "sampleFile": "samples/es2019/symbol-description.js",
     "functionName": "demoSymbolDescription",
     "compatKey": "javascript.builtins.Symbol.description",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2019.symbol",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "well-formed-json-stringify",
@@ -459,7 +645,11 @@
     "sampleFile": "samples/es2019/well-formed-json.js",
     "functionName": "demoWellFormedJSON",
     "compatKey": "javascript.builtins.JSON.stringify.well_formed_stringify",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "dynamic-import-import",
@@ -470,7 +660,11 @@
     "sampleFile": "samples/es2020/dynamic-import.js",
     "functionName": "demoDynamicImport",
     "compatKey": "javascript.operators.import",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": "es2015.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "globalthis",
@@ -481,7 +675,11 @@
     "sampleFile": "samples/es2020/global-this.js",
     "functionName": "demoGlobalThis",
     "compatKey": "javascript.builtins.globalThis",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "import-meta-meta-property",
@@ -492,7 +690,11 @@
     "sampleFile": "samples/es2020/import-meta.js",
     "functionName": "demoImportMeta",
     "compatKey": "javascript.operators.import_meta",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-matchall",
@@ -503,7 +705,11 @@
     "sampleFile": "samples/es2020/string-match-all.js",
     "functionName": "demoMatchAll",
     "compatKey": "javascript.builtins.String.matchAll",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2020.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "hashbang",
@@ -514,7 +720,11 @@
     "sampleFile": "samples/es2023/hashbang.js",
     "functionName": "hashbangDemo",
     "compatKey": "javascript.grammar.hashbang_comments",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "regexp-named-capture-groups",
@@ -525,7 +735,11 @@
     "sampleFile": "samples/es2018/regexp-named-capture-groups.js",
     "functionName": "demoNamedCaptureGroups",
     "compatKey": "javascript.regular_expressions.named_capturing_group",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": "es2018.regexp",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "regexp-s-dotall-flag",
@@ -536,7 +750,11 @@
     "sampleFile": "samples/es2018/regexp-dot-all-flag.js",
     "functionName": "demoDotAllFlag",
     "compatKey": "javascript.builtins.RegExp.dotAll",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": "es2018.regexp",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "regexp-unicode-property-escapes",
@@ -547,7 +765,11 @@
     "sampleFile": "samples/es2018/regexp-unicode-property-escapes.js",
     "functionName": "demoUnicodePropertyEscapes",
     "compatKey": "javascript.regular_expressions.unicode_character_class_escape",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "nullish-coalescing-operator",
@@ -558,7 +780,11 @@
     "sampleFile": "samples/es2020/nullish-coalescing.js",
     "functionName": "demoNullishCoalescing",
     "compatKey": "javascript.operators.nullish_coalescing",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2020",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "optional-chaining-operator",
@@ -569,7 +795,11 @@
     "sampleFile": "samples/es2020/optional-chaining.js",
     "functionName": "demoOptionalChaining",
     "compatKey": "javascript.operators.optional_chaining",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2020",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "promise-allsettled",
@@ -580,7 +810,11 @@
     "sampleFile": "samples/es2020/promise-all-settled.js",
     "functionName": "demoPromiseAllSettled",
     "compatKey": "javascript.builtins.Promise.allSettled",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2020.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "numeric-separators",
@@ -591,7 +825,11 @@
     "sampleFile": "samples/es2021/numeric-separators.js",
     "functionName": "demoNumericSeparators",
     "compatKey": "javascript.grammar.numeric_separators",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2021",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-replaceall",
@@ -602,7 +840,11 @@
     "sampleFile": "samples/es2021/string-replace-all.js",
     "functionName": "demoReplaceAll",
     "compatKey": "javascript.builtins.String.replaceAll",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2021.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "bigint",
@@ -613,7 +855,11 @@
     "sampleFile": "samples/es2020/bigint.js",
     "functionName": "demoBigInt",
     "compatKey": "javascript.builtins.BigInt",
-    "category": "api"
+    "category": "api",
+    "tsTarget": "es2020",
+    "tsLib": "es2020.bigint",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "logical-assignment",
@@ -624,7 +870,11 @@
     "sampleFile": "samples/es2021/logical-assignment.js",
     "functionName": "demoLogicalAssignment",
     "compatKey": "javascript.operators.logical_or_assignment",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2021",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "error-cause",
@@ -635,7 +885,11 @@
     "sampleFile": "samples/es2022/error-cause.js",
     "functionName": "demoErrorCause",
     "compatKey": "javascript.builtins.Error.cause",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2022.error",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "private-field-check-syntax",
@@ -646,7 +900,13 @@
     "sampleFile": "samples/es2022/private-field-check.js",
     "functionName": "SecureBox",
     "compatKey": "javascript.classes.private_class_fields_in",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2022",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__classPrivateFieldIn"
+    ]
   },
   {
     "id": "regexp-match-indices",
@@ -657,7 +917,11 @@
     "sampleFile": "samples/es2022/regexp-match-indices.js",
     "functionName": "demoMatchIndices",
     "compatKey": "javascript.builtins.RegExp.hasIndices",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2022",
+    "tsLib": "es2022.regexp",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "at-method-on-indexable-objects",
@@ -668,7 +932,11 @@
     "sampleFile": "samples/es2022/at-method.js",
     "functionName": "demoAtMethod",
     "compatKey": "javascript.builtins.Array.at",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2022.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-hasown",
@@ -679,7 +947,11 @@
     "sampleFile": "samples/es2022/object-has-own.js",
     "functionName": "demoObjectHasOwn",
     "compatKey": "javascript.builtins.Object.hasOwn",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2022.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-findlast",
@@ -690,7 +962,11 @@
     "sampleFile": "samples/es2023/array-find-last.js",
     "functionName": "demoArrayFindLast",
     "compatKey": "javascript.builtins.Array.findLast",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-findlastindex",
@@ -701,7 +977,11 @@
     "sampleFile": "samples/es2023/array-find-last-index.js",
     "functionName": "demoArrayFindLastIndex",
     "compatKey": "javascript.builtins.Array.findLastIndex",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "class-fields",
@@ -712,7 +992,14 @@
     "sampleFile": "samples/es2022/class-fields.js",
     "functionName": "Counter",
     "compatKey": "javascript.classes.public_class_fields",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2022",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__classPrivateFieldGet",
+      "__classPrivateFieldSet"
+    ]
   },
   {
     "id": "regexp-lookbehind-assertions",
@@ -723,7 +1010,11 @@
     "sampleFile": "samples/es2018/regexp-lookbehind-assertions.js",
     "functionName": "demoLookbehindAssertions",
     "compatKey": "javascript.regular_expressions.lookbehind_assertion",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "class-static-initialization-blocks",
@@ -734,7 +1025,11 @@
     "sampleFile": "samples/es2022/class-static-initialization-blocks.js",
     "functionName": "ConfigManager",
     "compatKey": "javascript.classes.static.initialization_blocks",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2022",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "function-prototype-tostring-revision",
@@ -745,7 +1040,11 @@
     "sampleFile": "samples/es2019/function-to-string.js",
     "functionName": "demoFunctionToString",
     "compatKey": "javascript.builtins.Function.toString.toString_revision",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "regexp-v-flag",
@@ -756,7 +1055,11 @@
     "sampleFile": "samples/es2024/regexp-v-flag.js",
     "functionName": "demoRegExpVFlag",
     "compatKey": "javascript.builtins.RegExp.unicodeSets",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2024",
+    "tsLib": "es2024.regexp",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "map-groupby",
@@ -767,7 +1070,11 @@
     "sampleFile": "samples/es2024/map-group-by.js",
     "functionName": "demoMapGroupBy",
     "compatKey": "javascript.builtins.Map.groupBy",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2024.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "ecmascript-2024-15th-edition-code-samples",
@@ -778,7 +1085,11 @@
     "sampleFile": "samples/es2024/object-group-by.js",
     "functionName": "demoObjectGroupBy",
     "compatKey": "javascript.builtins.Object.groupBy",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2024.object",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "promise-withresolvers",
@@ -789,7 +1100,11 @@
     "sampleFile": "samples/es2024/promise-with-resolvers.js",
     "functionName": "demoPromiseWithResolvers",
     "compatKey": "javascript.builtins.Promise.withResolvers",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2024.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "regexp-duplicate-named-capture-groups",
@@ -800,7 +1115,11 @@
     "sampleFile": "samples/es2025/regexp-duplicate-named-capture-groups.js",
     "functionName": "demoDuplicateNamedCaptureGroups",
     "compatKey": "javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2018",
+    "tsLib": "es2018.regexp",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "promise-try",
@@ -811,7 +1130,11 @@
     "sampleFile": "samples/es2025/promise-try.js",
     "functionName": "demoPromiseTry",
     "compatKey": "javascript.builtins.Promise.try",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2025.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "atomics-pause",
@@ -822,7 +1145,11 @@
     "sampleFile": "samples/es2026/atomics-pause.js",
     "functionName": "demoAtomicsPause",
     "compatKey": "javascript.builtins.Atomics.pause",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "esnext.sharedmemory",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "import-attributes",
@@ -833,7 +1160,11 @@
     "sampleFile": "samples/es2025/import-attributes.js",
     "functionName": "demoImportAttributes",
     "compatKey": "javascript.statements.import.import_attributes",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es5",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "regexp-escape",
@@ -844,7 +1175,11 @@
     "sampleFile": "samples/es2026/regexp-escape.js",
     "functionName": "demoRegExpEscape",
     "compatKey": "javascript.builtins.RegExp.escape",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2025.regexp",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "atomics-waitasync",
@@ -855,7 +1190,11 @@
     "sampleFile": "samples/es2024/atomics-wait-async.js",
     "functionName": "demoAtomicsWaitAsync",
     "compatKey": "javascript.builtins.Atomics.waitAsync",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2024.sharedmemory",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "symbols-as-weakmap-and-weakset-keys",
@@ -866,7 +1205,11 @@
     "sampleFile": "samples/es2023/symbols-as-weak-keys.js",
     "functionName": "demoSymbolsAsWeakKeys",
     "compatKey": "javascript.builtins.WeakMap.symbol_as_keys",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2023.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "math-sumprecise",
@@ -877,7 +1220,11 @@
     "sampleFile": "samples/es2026/math-sum-precise.js",
     "functionName": "demoMathSumPrecise",
     "compatKey": "javascript.builtins.Math.sumPrecise",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": null,
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "top-level-await",
@@ -888,7 +1235,11 @@
     "sampleFile": "samples/es2022/top-level-await.js",
     "functionName": "topLevelAwaitDemo",
     "compatKey": "javascript.operators.await.top_level",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2017",
+    "tsLib": "es2015.promise",
+    "tsBelowTargetBehavior": "compiler-error",
+    "tsHelpers": []
   },
   {
     "id": "error-iserror",
@@ -899,7 +1250,11 @@
     "sampleFile": "samples/es2026/error-is-error.js",
     "functionName": "demoErrorIsError",
     "compatKey": "javascript.builtins.Error.isError",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "esnext.error",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-foreach",
@@ -910,7 +1265,11 @@
     "sampleFile": "samples/es2011/array-for-each.js",
     "functionName": "demoArrayForEach",
     "compatKey": "javascript.builtins.Array.forEach",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-map",
@@ -921,7 +1280,11 @@
     "sampleFile": "samples/es2011/array-map.js",
     "functionName": "demoArrayMap",
     "compatKey": "javascript.builtins.Array.map",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-filter",
@@ -932,7 +1295,11 @@
     "sampleFile": "samples/es2011/array-filter.js",
     "functionName": "demoArrayFilter",
     "compatKey": "javascript.builtins.Array.filter",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-reduce",
@@ -943,7 +1310,11 @@
     "sampleFile": "samples/es2011/array-reduce.js",
     "functionName": "demoArrayReduce",
     "compatKey": "javascript.builtins.Array.reduce",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-reduceright",
@@ -954,7 +1325,11 @@
     "sampleFile": "samples/es2011/array-reduce-right.js",
     "functionName": "demoArrayReduceRight",
     "compatKey": "javascript.builtins.Array.reduceRight",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-some",
@@ -965,7 +1340,11 @@
     "sampleFile": "samples/es2011/array-some.js",
     "functionName": "demoArraySome",
     "compatKey": "javascript.builtins.Array.some",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-every",
@@ -976,7 +1355,11 @@
     "sampleFile": "samples/es2011/array-every.js",
     "functionName": "demoArrayEvery",
     "compatKey": "javascript.builtins.Array.every",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-indexof",
@@ -987,7 +1370,11 @@
     "sampleFile": "samples/es2011/array-index-of.js",
     "functionName": "demoArrayIndexof",
     "compatKey": "javascript.builtins.Array.indexOf",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-lastindexof",
@@ -998,7 +1385,11 @@
     "sampleFile": "samples/es2011/array-last-index-of.js",
     "functionName": "demoArrayLastIndexOf",
     "compatKey": "javascript.builtins.Array.lastIndexOf",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-isarray",
@@ -1009,7 +1400,11 @@
     "sampleFile": "samples/es2011/array-is-array.js",
     "functionName": "demoArrayIsArray",
     "compatKey": "javascript.builtins.Array.isArray",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "date-now",
@@ -1020,7 +1415,11 @@
     "sampleFile": "samples/es2011/date-now.js",
     "functionName": "demoDateNow",
     "compatKey": "javascript.builtins.Date.now",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "date-prototype-toisostring",
@@ -1031,7 +1430,11 @@
     "sampleFile": "samples/es2011/date-to-iso-string.js",
     "functionName": "demoDateToISOString",
     "compatKey": "javascript.builtins.Date.toISOString",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "date-prototype-tojson",
@@ -1042,7 +1445,11 @@
     "sampleFile": "samples/es2011/date-to-json.js",
     "functionName": "demoDateToJSON",
     "compatKey": "javascript.builtins.Date.toJSON",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-defineproperty",
@@ -1053,7 +1460,11 @@
     "sampleFile": "samples/es2011/object-define-property.js",
     "functionName": "demoObjectDefineProperty",
     "compatKey": "javascript.builtins.Object.defineProperty",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-create",
@@ -1064,7 +1475,11 @@
     "sampleFile": "samples/es2011/object-create.js",
     "functionName": "demoObjectCreate",
     "compatKey": "javascript.builtins.Object.create",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-keys",
@@ -1075,7 +1490,11 @@
     "sampleFile": "samples/es2011/object-keys.js",
     "functionName": "demoObjectKeys",
     "compatKey": "javascript.builtins.Object.keys",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-freeze",
@@ -1086,7 +1505,11 @@
     "sampleFile": "samples/es2011/object-freeze.js",
     "functionName": "demoObjectFreeze",
     "compatKey": "javascript.builtins.Object.freeze",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-seal",
@@ -1097,7 +1520,11 @@
     "sampleFile": "samples/es2011/object-seal.js",
     "functionName": "demoObjectSeal",
     "compatKey": "javascript.builtins.Object.seal",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-preventextensions",
@@ -1108,7 +1535,11 @@
     "sampleFile": "samples/es2011/object-prevent-extensions.js",
     "functionName": "demoObjectPreventExtensions",
     "compatKey": "javascript.builtins.Object.preventExtensions",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es5",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-assign",
@@ -1119,7 +1550,11 @@
     "sampleFile": "samples/es2015/object-assign.js",
     "functionName": "demoObjectAssign",
     "compatKey": "javascript.builtins.Object.assign",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "object-is",
@@ -1130,7 +1565,11 @@
     "sampleFile": "samples/es2015/object-is.js",
     "functionName": "demoObjectIs",
     "compatKey": "javascript.builtins.Object.is",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-from",
@@ -1141,7 +1580,11 @@
     "sampleFile": "samples/es2015/array-from.js",
     "functionName": "demoArrayFrom",
     "compatKey": "javascript.builtins.Array.from",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-of",
@@ -1152,7 +1595,11 @@
     "sampleFile": "samples/es2015/array-of.js",
     "functionName": "demoArrayOf",
     "compatKey": "javascript.builtins.Array.of",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-find",
@@ -1163,7 +1610,11 @@
     "sampleFile": "samples/es2015/array-find.js",
     "functionName": "demoArrayFind",
     "compatKey": "javascript.builtins.Array.find",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-findindex",
@@ -1174,7 +1625,11 @@
     "sampleFile": "samples/es2015/array-find-index.js",
     "functionName": "demoArrayFindIndex",
     "compatKey": "javascript.builtins.Array.findIndex",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-includes",
@@ -1185,7 +1640,11 @@
     "sampleFile": "samples/es2015/string-includes.js",
     "functionName": "demoStringIncludes",
     "compatKey": "javascript.builtins.String.includes",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-startswith",
@@ -1196,7 +1655,11 @@
     "sampleFile": "samples/es2015/string-starts-with.js",
     "functionName": "demoStringStartsWith",
     "compatKey": "javascript.builtins.String.startsWith",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-endswith",
@@ -1207,7 +1670,11 @@
     "sampleFile": "samples/es2015/string-ends-with.js",
     "functionName": "demoStringEndsWith",
     "compatKey": "javascript.builtins.String.endsWith",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-repeat",
@@ -1218,7 +1685,11 @@
     "sampleFile": "samples/es2015/string-repeat.js",
     "functionName": "demoStringRepeat",
     "compatKey": "javascript.builtins.String.repeat",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "number-isnan",
@@ -1229,7 +1700,11 @@
     "sampleFile": "samples/es2015/number-is-nan.js",
     "functionName": "demoNumberIsNaN",
     "compatKey": "javascript.builtins.Number.isNaN",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "number-isinteger",
@@ -1240,7 +1715,11 @@
     "sampleFile": "samples/es2015/number-is-integer.js",
     "functionName": "demoNumberIsInteger",
     "compatKey": "javascript.builtins.Number.isInteger",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "math-trunc",
@@ -1251,7 +1730,11 @@
     "sampleFile": "samples/es2015/math-trunc.js",
     "functionName": "demoMathTrunc",
     "compatKey": "javascript.builtins.Math.trunc",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "math-sign",
@@ -1262,7 +1745,11 @@
     "sampleFile": "samples/es2015/math-sign.js",
     "functionName": "demoMathSign",
     "compatKey": "javascript.builtins.Math.sign",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.core",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "map",
@@ -1273,7 +1760,11 @@
     "sampleFile": "samples/es2015/map.js",
     "functionName": "demoMap",
     "compatKey": "javascript.builtins.Map",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set",
@@ -1284,7 +1775,11 @@
     "sampleFile": "samples/es2015/set.js",
     "functionName": "demoSet",
     "compatKey": "javascript.builtins.Set",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "weakmap",
@@ -1295,7 +1790,11 @@
     "sampleFile": "samples/es2015/weak-map.js",
     "functionName": "demoWeakMap",
     "compatKey": "javascript.builtins.WeakMap",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "weakset",
@@ -1306,7 +1805,11 @@
     "sampleFile": "samples/es2015/weak-set.js",
     "functionName": "demoWeakSet",
     "compatKey": "javascript.builtins.WeakSet",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "proxy",
@@ -1317,7 +1820,11 @@
     "sampleFile": "samples/es2015/proxy.js",
     "functionName": "demoProxy",
     "compatKey": "javascript.builtins.Proxy",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.proxy",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "reflect",
@@ -1328,7 +1835,11 @@
     "sampleFile": "samples/es2015/reflect.js",
     "functionName": "demoReflect",
     "compatKey": "javascript.builtins.Reflect",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2015.reflect",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "default-parameters",
@@ -1339,7 +1850,11 @@
     "sampleFile": "samples/es2015/default-parameters.js",
     "functionName": "demoDefaultParameters",
     "compatKey": "javascript.functions.default_parameters",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "rest-parameters",
@@ -1350,7 +1865,11 @@
     "sampleFile": "samples/es2015/rest-parameters.js",
     "functionName": "demoRestParameters",
     "compatKey": "javascript.functions.rest_parameters",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-syntax",
+    "tsHelpers": []
   },
   {
     "id": "spread-syntax",
@@ -1361,7 +1880,14 @@
     "sampleFile": "samples/es2015/spread-syntax.js",
     "functionName": "demoSpreadSyntax",
     "compatKey": "javascript.operators.spread",
-    "category": "syntax"
+    "category": "syntax",
+    "tsTarget": "es2015",
+    "tsLib": null,
+    "tsBelowTargetBehavior": "downlevel-helper",
+    "tsHelpers": [
+      "__spreadArray",
+      "__read"
+    ]
   },
   {
     "id": "sharedarraybuffer",
@@ -1372,7 +1898,11 @@
     "sampleFile": "samples/es2017/shared-array-buffer.js",
     "functionName": "demoSharedArrayBuffer",
     "compatKey": "javascript.builtins.SharedArrayBuffer",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2017.sharedmemory",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "atomics",
@@ -1383,7 +1913,11 @@
     "sampleFile": "samples/es2017/atomics.js",
     "functionName": "demoAtomics",
     "compatKey": "javascript.builtins.Atomics",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2017.sharedmemory",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "promise-any",
@@ -1394,7 +1928,11 @@
     "sampleFile": "samples/es2021/promise-any.js",
     "functionName": "demoPromiseAny",
     "compatKey": "javascript.builtins.Promise.any",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2021.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "aggregate-error",
@@ -1405,7 +1943,11 @@
     "sampleFile": "samples/es2021/aggregate-error.js",
     "functionName": "demoAggregateError",
     "compatKey": "javascript.builtins.AggregateError",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2021.promise",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "weakref",
@@ -1416,7 +1958,11 @@
     "sampleFile": "samples/es2021/weak-ref.js",
     "functionName": "demoWeakRef",
     "compatKey": "javascript.builtins.WeakRef",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2021.weakref",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "finalizationregistry",
@@ -1427,7 +1973,11 @@
     "sampleFile": "samples/es2021/finalization-registry.js",
     "functionName": "demoFinalizationRegistry",
     "compatKey": "javascript.builtins.FinalizationRegistry",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2021.weakref",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-toreversed",
@@ -1438,7 +1988,11 @@
     "sampleFile": "samples/es2023/array-to-reversed.js",
     "functionName": "demoArrayToReversed",
     "compatKey": "javascript.builtins.Array.toReversed",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-tosorted",
@@ -1449,7 +2003,11 @@
     "sampleFile": "samples/es2023/array-to-sorted.js",
     "functionName": "demoArrayToSorted",
     "compatKey": "javascript.builtins.Array.toSorted",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-tospliced",
@@ -1460,7 +2018,11 @@
     "sampleFile": "samples/es2023/array-to-spliced.js",
     "functionName": "demoArrayToSpliced",
     "compatKey": "javascript.builtins.Array.toSpliced",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "array-prototype-with",
@@ -1471,7 +2033,11 @@
     "sampleFile": "samples/es2023/array-with.js",
     "functionName": "demoArrayWith",
     "compatKey": "javascript.builtins.Array.with",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2023.array",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "arraybuffer-prototype-resize",
@@ -1482,7 +2048,11 @@
     "sampleFile": "samples/es2024/array-buffer-resize.js",
     "functionName": "demoArrayBufferResize",
     "compatKey": "javascript.builtins.ArrayBuffer.resize",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2024.arraybuffer",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "arraybuffer-prototype-transfer",
@@ -1493,7 +2063,11 @@
     "sampleFile": "samples/es2024/array-buffer-transfer.js",
     "functionName": "demoArrayBufferTransfer",
     "compatKey": "javascript.builtins.ArrayBuffer.transfer",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2024.arraybuffer",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-iswellformed",
@@ -1504,7 +2078,11 @@
     "sampleFile": "samples/es2024/string-is-well-formed.js",
     "functionName": "demoStringIsWellFormed",
     "compatKey": "javascript.builtins.String.isWellFormed",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2024.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "string-prototype-towellformed",
@@ -1515,7 +2093,11 @@
     "sampleFile": "samples/es2024/string-to-well-formed.js",
     "functionName": "demoStringToWellFormed",
     "compatKey": "javascript.builtins.String.toWellFormed",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2024.string",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-intersection",
@@ -1526,7 +2108,11 @@
     "sampleFile": "samples/es2025/set-intersection.js",
     "functionName": "demoSetIntersection",
     "compatKey": "javascript.builtins.Set.intersection",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-union",
@@ -1537,7 +2123,11 @@
     "sampleFile": "samples/es2025/set-union.js",
     "functionName": "demoSetUnion",
     "compatKey": "javascript.builtins.Set.union",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-difference",
@@ -1548,7 +2138,11 @@
     "sampleFile": "samples/es2025/set-difference.js",
     "functionName": "demoSetDifference",
     "compatKey": "javascript.builtins.Set.difference",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-symmetricdifference",
@@ -1559,7 +2153,11 @@
     "sampleFile": "samples/es2025/set-symmetric-difference.js",
     "functionName": "demoSetSymmetricDifference",
     "compatKey": "javascript.builtins.Set.symmetricDifference",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-issubsetof",
@@ -1570,7 +2168,11 @@
     "sampleFile": "samples/es2025/set-is-subset-of.js",
     "functionName": "demoSetIsSubsetOf",
     "compatKey": "javascript.builtins.Set.isSubsetOf",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-issupersetof",
@@ -1581,7 +2183,11 @@
     "sampleFile": "samples/es2025/set-is-superset-of.js",
     "functionName": "demoSetIsSupersetOf",
     "compatKey": "javascript.builtins.Set.isSupersetOf",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "set-prototype-isdisjointfrom",
@@ -1592,7 +2198,11 @@
     "sampleFile": "samples/es2025/set-is-disjoint-from.js",
     "functionName": "demoSetIsDisjointFrom",
     "compatKey": "javascript.builtins.Set.isDisjointFrom",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "es2025.collection",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "float16array",
@@ -1603,7 +2213,11 @@
     "sampleFile": "samples/es2025/float16-array.js",
     "functionName": "demoFloat16Array",
     "compatKey": "javascript.builtins.Float16Array",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2025.float16",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "math-f16round",
@@ -1614,7 +2228,11 @@
     "sampleFile": "samples/es2025/math-f16round.js",
     "functionName": "demoMathF16round",
     "compatKey": "javascript.builtins.Math.f16round",
-    "category": "api"
+    "category": "api",
+    "tsTarget": null,
+    "tsLib": "es2025.float16",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "uint8array-base64",
@@ -1625,7 +2243,11 @@
     "sampleFile": "samples/es2026/uint8array-base64.js",
     "functionName": "demoUint8ArrayBase64",
     "compatKey": "javascript.builtins.Uint8Array.toBase64",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "esnext.typedarrays",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   },
   {
     "id": "uint8array-hex",
@@ -1636,6 +2258,10 @@
     "sampleFile": "samples/es2026/uint8array-hex.js",
     "functionName": "demoUint8ArrayHex",
     "compatKey": "javascript.builtins.Uint8Array.toHex",
-    "category": "method"
+    "category": "method",
+    "tsTarget": null,
+    "tsLib": "esnext.typedarrays",
+    "tsBelowTargetBehavior": "untouched",
+    "tsHelpers": []
   }
 ]

@@ -150,11 +150,29 @@ function formatDescription(desc) {
   return escapeTableCell(trimmed);
 }
 
+export function formatTsBehavior(item) {
+  const behavior = item.tsBelowTargetBehavior;
+  const helpers = Array.isArray(item.tsHelpers) && item.tsHelpers.length > 0
+    ? item.tsHelpers.map(h => `\`${escapeTableCell(h)}\``).join(', ')
+    : '';
+
+  if (behavior === 'downlevel-helper') {
+    return helpers ? `Downlevel (${helpers})` : 'Downlevel (Helper)';
+  }
+  if (behavior === 'downlevel-syntax') {
+    return 'Downlevel (Syntax)';
+  }
+  if (behavior === 'compiler-error') {
+    return 'Compiler Error';
+  }
+  return 'Untouched';
+}
+
 export function generateMarkdown(manifest) {
   let md = `# ECMAScript Language Features Index\n\n`;
-  md += `A comprehensive breakdown of ECMAScript language features showcased across the executable code samples in \`es-samples\` (ES2011/ES5.1 through ES2026), cross-referenced with MDN [browser-compat-data](https://github.com/mdn/browser-compat-data) and Baseline web feature identifiers on [webstatus.dev](https://webstatus.dev).\n\n`;
-  md += `| Feature Name | Category | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available | Baseline Year Match |\n`;
-  md += `| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: |\n`;
+  md += `A comprehensive breakdown of ECMAScript language features showcased across the executable code samples in \`es-samples\` (ES2011/ES5.1 through ES2026), cross-referenced with MDN [browser-compat-data](https://github.com/mdn/browser-compat-data), Baseline web feature identifiers on [webstatus.dev](https://webstatus.dev), and TypeScript (\`tsconfig.json\`) \`target\` / \`lib\` behavior.\n\n`;
+  md += `| Feature Name | Category | Description | ES Edition | MDN Compat Key | web-features Identifier | Baseline Newly available | Baseline Widely available | Baseline Year Match | TS Target | TS Lib | TS Below-Target Behavior |\n`;
+  md += `| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- | :--- |\n`;
 
   const sortedManifest = [...manifest].sort(compareFeatures);
   const displayCategoryMap = { syntax: 'Syntax', method: 'Method', api: 'API' };
@@ -197,7 +215,11 @@ export function generateMarkdown(manifest) {
       }
     }
 
-    md += `| ${nameLink} | ${categoryDisplay} | ${description} | ${esVersion} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} | ${matchBadge} |\n`;
+    const tsTargetDisplay = item.tsTarget ? `\`${escapeTableCell(item.tsTarget)}\`` : '—';
+    const tsLibDisplay = item.tsLib ? `\`${escapeTableCell(item.tsLib)}\`` : '—';
+    const tsBehaviorDisplay = formatTsBehavior(item);
+
+    md += `| ${nameLink} | ${categoryDisplay} | ${description} | ${esVersion} | ${compatKeyLink} | ${webLink} | ${newlyAvailable} | ${widelyAvailable} | ${matchBadge} | ${tsTargetDisplay} | ${tsLibDisplay} | ${tsBehaviorDisplay} |\n`;
   }
 
   md += `\n\* *Features marked "Pre-Baseline (Universal Support)" (such as ES5.1 Strict Mode) have been universally supported across all major browsers since before Baseline tracking began in 2015.*\n`;

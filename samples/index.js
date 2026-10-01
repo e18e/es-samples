@@ -4,6 +4,16 @@
  * Spec Reference: https://ecma-international.org/publications-and-standards/standards/ecma-262/
  */
 
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const featuresPath = path.resolve(__dirname, '../features.json');
+
+export const features = JSON.parse(fs.readFileSync(featuresPath, 'utf8'));
+
 export * as es2011 from './es2011.js';
 export * as es2015 from './es2015.js';
 export * as es2016 from './es2016.js';

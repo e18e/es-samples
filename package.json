@@ -31,10 +31,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@mdn/browser-compat-data": "^8.0.6",
-    "web-features": "^3.32.0"
+    "@mdn/browser-compat-data": "^8.1.4",
+    "web-features": "^3.40.1"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }
